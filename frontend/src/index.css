@@ -345,7 +345,7 @@ body {
 {
   position: relative;
   margin: 20px 0;
-    bottom: 180px;
+  bottom: 180px;
 }
 .contact-container .contactInfo ul.info li
 {
@@ -422,7 +422,7 @@ body {
 {
   position: absolute;
   left: 0;
-  padding: 5px 5px;
+  padding: 10px 15px;
   pointer-events: none;
   font-size: 18px;
   font-weight: 300;
@@ -451,4 +451,94 @@ body {
 .contact-container .contactForm .formBox .inputBox Button:hover
 {
   background: #2563EB;
+}
+
+/* footer */
+
+.footercontainer
+{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.footercontainer .sec
+{
+  margin-right: 30px;
+}
+.footercontainer .sec.aboutus
+{
+  width: 40%;
+}
+.footercontainer .sec.aboutus img
+{
+  position: relative;
+  margin-bottom: 15px;
+}
+.footercontainer img::before
+{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #f00;
+}
+.footercontainer h2
+{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.footercontainer h2::before
+{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #f00;
+}
+.quickLinks
+{
+  position: relative;
+  width: 25%;
+}
+.quickLinks ul li
+{
+  list-style: none;
+}
+.quickLinks ul li a
+{
+  color: #3B82F6;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.quickLinks ul li a:hover
+{
+  color: #2563EB;
+}
+.contact
+{
+  width: calc(35% - 60px);
+  margin-right: 0 !important;
+}
+.contact .info
+{
+  position: relative;
+}
+.contact .info li
+{
+  display: flex;
+  margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1)
+{
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
 }

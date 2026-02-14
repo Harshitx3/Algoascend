@@ -9,6 +9,8 @@ import {
 import { useScrollTop } from "@/hooks/use-scroll-top";
 import { cn } from "@/lib/utils"
 
+
+
 export default function Navbar() {
   const scrolled = useScrollTop();
 
@@ -24,6 +26,38 @@ export default function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Courses</NavigationMenuTrigger>
               <NavigationMenuContent>
+                <div>
+                  <ul className="grid w-50 gap-0.5 md:w-125 md:grid-row-4 lg:w-100 h-40">
+                    <div className="flex items-center hover:bg-gray-400/10 p-1 rounded-sm">
+                      <div>
+                        <a>RegNote</a>
+                      </div>
+                    </div>
+                    <div className="flex items-center hover:bg-gray-400/10 p-1 rounded-sm">
+                      <div>
+                        <a>Calender</a>
+                      </div>
+                    </div>
+                    <div className="flex items-center hover:bg-gray-400/10 p-1 rounded-sm">
+                      <div>
+                        <a>Web clipper</a>
+                      </div>
+                    </div>
+                    <div className="flex items-center hover:bg-gray-400/10 p-1 rounded-sm">
+                      <div>
+                        <p className="text-gray-400 text-sm font-light">
+                          RegNote is always at home right
+                        </p>
+                        <a
+                          href="/courses"
+                          className="underline text-gray-400 text-sm font-light"
+                        >
+                          in your browser
+                        </a>
+                      </div>
+                    </div>
+                  </ul>
+                </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
