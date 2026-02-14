@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { useScrollTop } from "@/hooks/use-scroll-top";
 import { cn } from "@/lib/utils"
+import { Link } from "react-router-dom";
 
 
 
@@ -48,12 +49,12 @@ export default function Navbar() {
                         <p className="text-gray-400 text-sm font-light">
                           RegNote is always at home right
                         </p>
-                        <a
-                          href="/courses"
+                        <Link
+                          to="/courses"
                           className="underline text-gray-400 text-sm font-light"
                         >
                           in your browser
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </ul>
