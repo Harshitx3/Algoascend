@@ -20,7 +20,25 @@ export default function Footer() {
               <li><a href="#">Contact Us</a></li>
             </ul>
           </div>
-          <div className="sec contact">
+          <div className="sec post">
+            <h2 className="text-2xl">Latest Post</h2>
+            <ul className="info">
+              <li>
+                <span>
+                  <Mail />
+                </span>
+                <p>
+                  <a href="mailto:info@algoascend.in">info@algoascend.in</a>
+                </p>
+              </li>
+              <li>
+                <span>
+                  <MapPin />
+                </span>
+                <span>123 Main Street, City, Country</span>
+              </li>
+            </ul>
+          </div><div className="sec contact">
             <h2 className="text-2xl">Contact Us</h2>
             <ul className="info">
               <li>
