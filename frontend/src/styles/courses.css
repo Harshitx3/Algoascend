@@ -99,6 +99,13 @@
   text-decoration: none;
 }
 
+.coursespage .card .content ul
+{
+  position: relative;
+  top: 10px;
+  font-weight: 300;
+}
+
 .coursespage .img-slider-img
 {
   object-fit: cover;
