@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import { Navigate, Route, Routes } from "react-router-dom";
-import Courses from "./app/navbar/menu-items/courses";
-import Page from "./app/page";
+
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+=======
+import { Route, Routes } from "react-router-dom";
+import Page from "./app/page";
+import Courses from "./app/menu-items/courses/courses";
+>>>>>>> b8bd22360764377ccaf5dd307c29debf52309208
 
 export default function App() {
   const isAuthed = Boolean(localStorage.getItem("token"));

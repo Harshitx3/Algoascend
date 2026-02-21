@@ -80,8 +80,13 @@ const teamMembers = [
 
 export default function Team() {
   return (
+<<<<<<< HEAD
     <div className="mt-16 md:mt-24 px-4 md:px-8">
       <div className="flex flex-col items-center justify-center text-center max-w-6xl mx-auto">
+=======
+    <div className="mt-50 h-350 teamcard">
+      <div className="flex flex-col items-center justify-center text-center">
+>>>>>>> b8bd22360764377ccaf5dd307c29debf52309208
         <div className="flex flex-col">
           <h2 className="text-3xl md:text-4xl font-bold">
             Meet Our Team

@@ -142,7 +142,7 @@ body {
 
 
 /* teams */
-.card
+.teamcard .card
 {
   position: relative;
   width: 350px;
@@ -152,11 +152,11 @@ body {
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
   transition: 0.5s;
 }
-.card:hover
+.teamcard .card:hover
 {
   height: 450px;
 }
-.imgBx
+.teamcard .imgBx
 {
   position: absolute;
   left: 50%;
@@ -170,12 +170,12 @@ body {
   overflow: hidden;
   transition: 0.5s;
 }
-.card:hover .imgBx
+.teamcard .card:hover .imgBx
 {
   width: 250px;
   height: 250px;
 }
-.imgBx img
+.teamcard .imgBx img
 {
   position: absolute;
   top: 0;
@@ -184,7 +184,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.card .content
+.teamcard .card .content
 {
   position: absolute;
   width: 100%;
@@ -194,7 +194,7 @@ body {
   align-items: flex-end;
   overflow: hidden;
 }
-.card .content .details
+.teamcard .card .content .details
 {
   padding: 40px;
   text-align: center;
@@ -202,30 +202,30 @@ body {
   transition: 0.5s;
   transform: translateY(160px);
 }
-.card:hover .content .details
+.teamcard .card:hover .content .details
 {
   transform: translateY(0px);
 }
-.card .content .details h2
+.teamcard .card .content .details h2
 {
   font-size: 1.25em;
   font-weight: 600;
   color: #555;
   line-height: 1.2em;
 }
-.card .content .details h2 span
+.teamcard .card .content .details h2 span
 {
   font-size: 0.75em;
   font-weight: 500;
   opacity: 0.5;
 }
-.card .content .details .data
+.teamcard .card .content .details .data
 {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
 }
-.card .content .details .data img
+.teamcard .card .content .details .data img
 {
   width: 40px;
   height: 40px;
@@ -233,14 +233,14 @@ body {
   object-fit: cover;
   overflow: hidden;
 }
-.card .content .details .actionTxt
+.teamcard .card .content .details .actionTxt
 {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-.card .content .details .actionTxt h3
+.teamcard .card .content .details .actionTxt h3
 {
   font-size: 1em;
   color: #555;
@@ -512,7 +512,7 @@ body {
 }
 .footercontainer .sec.aboutus
 {
-  width: 40%;
+  width: 30%;
 }
 .footercontainer .sec.aboutus img
 {
@@ -549,7 +549,7 @@ body {
 .quickLinks
 {
   position: relative;
-  width: 25%;
+  width: 15%;
 }
 .quickLinks ul li
 {
@@ -568,7 +568,7 @@ body {
 }
 .contact
 {
-  width: calc(35% - 60px);
+  width: calc(25% - 60px);
   margin-right: 0 !important;
 }
 .contact .info
