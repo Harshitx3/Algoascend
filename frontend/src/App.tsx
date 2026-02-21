@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import Courses from "./app/navbar/menu-items/courses";
 import Page from "./app/page";
+import Courses from "./app/menu-items/courses/courses";
 
 export default function App() {
   return (

@@ -80,7 +80,7 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <div className="mt-50 h-350">
+    <div className="mt-50 h-350 teamcard">
       <div className="flex flex-col items-center justify-center text-center">
         <div className="flex flex-col">
           <h2 className="text-4xl font-bold">
