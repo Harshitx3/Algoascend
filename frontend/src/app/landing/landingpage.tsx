@@ -9,7 +9,7 @@ import Testimonial from "./_components/testimonial";
 
 export default function LandingPage() {
   return (
-    <div>
+    <div className="px-4 md:px-8">
       <Hero />
       <SmallCard />
       <Explore />
