@@ -68,7 +68,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="copyrightText">
-        <p>&copy; 2025 AlgoAscend. All rights reserved.</p>
+        <p>&copy; 2026 AlgoAscend. All rights reserved.</p>
       </div>
     </>
   )

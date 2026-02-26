@@ -3,6 +3,7 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
+  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
@@ -26,35 +27,35 @@ export default function Navbar() {
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Courses</NavigationMenuTrigger>
-              <NavigationMenuContent>
+              <NavigationMenuContent className="bg-[#0F1115] border-gray-800 text-white">
                 <div>
                   <ul className="grid w-50 gap-0.5 md:w-125 md:grid-row-4 lg:w-100 h-40">
                     <div className="flex items-center hover:bg-gray-400/10 p-1 rounded-sm">
                       <div>
-                        <a>RegNote</a>
+                        <a>Foundations Track</a>
                       </div>
                     </div>
                     <div className="flex items-center hover:bg-gray-400/10 p-1 rounded-sm">
                       <div>
-                        <a>Calender</a>
+                        <a>Software Engineering Track</a>
                       </div>
                     </div>
                     <div className="flex items-center hover:bg-gray-400/10 p-1 rounded-sm">
                       <div>
-                        <a>Web clipper</a>
+                        <a>Data & Analytics Track</a>
                       </div>
                     </div>
                     <div className="flex items-center hover:bg-gray-400/10 p-1 rounded-sm">
                       <div>
                         <p className="text-gray-400 text-sm font-light">
-                          RegNote is always at home right
+                          For other courses&nbsp; 
+                          <Link
+                            to="/courses"
+                            className="underline text-gray-400 text-sm font-light"
+                          >
+                            visit course page
+                          </Link>
                         </p>
-                        <Link
-                          to="/courses"
-                          className="underline text-gray-400 text-sm font-light"
-                        >
-                          in your browser
-                        </Link>
                       </div>
                     </div>
                   </ul>
@@ -72,14 +73,22 @@ export default function Navbar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
-              <NavigationMenuContent>
-              </NavigationMenuContent>
+              <NavigationMenuLink className="hover:bg-[#1A1D23] hover:text-white w-20">
+                <Link
+                  to="/about-us"
+                >
+                  About Us
+                  </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Gallery</NavigationMenuTrigger>
-              <NavigationMenuContent>
-              </NavigationMenuContent>
+              <NavigationMenuLink className="hover:bg-[#1A1D23] hover:text-white">
+                <Link
+                  to="/gallery"
+                >
+                  Gallery
+                  </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>

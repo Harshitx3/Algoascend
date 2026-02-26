@@ -1,8 +1,11 @@
 import course1 from "@/assets/courses/courses1.jpg";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const courseGroups = [
   {
+    slug: "foundations",
     groupName: "Foundations Track",
     courses: [
       {
@@ -33,6 +36,7 @@ const courseGroups = [
   },
 
   {
+    slug: "software-engineering",
     groupName: "Software Engineering Track",
     courses: [
       {
@@ -69,6 +73,7 @@ const courseGroups = [
   },
 
   {
+    slug: "data-analytics",
     groupName: "Data & Analytics Track",
     courses: [
       {
@@ -105,6 +110,7 @@ const courseGroups = [
   },
 
   {
+    slug: "ai-ml",
     groupName: "AI & Machine Learning Track",
     courses: [
       {
@@ -135,6 +141,7 @@ const courseGroups = [
   },
 
   {
+    slug: "generative-ai",
     groupName: "Generative AI & LLM Track",
     courses: [
       {
@@ -159,6 +166,7 @@ const courseGroups = [
   },
 
   {
+    slug: "agentic-ai",
     groupName: "Agentic AI Track (Flagship)",
     courses: [
       {
@@ -183,6 +191,7 @@ const courseGroups = [
   },
 
   {
+    slug: "career-acceleration",
     groupName: "Career Acceleration Track",
     courses: [
       {
@@ -213,20 +222,31 @@ const courseGroups = [
   },
 ];
 
-
-
 export default function CoursesList() {
+
+  const location = useLocation();
+
+useEffect(() => {
+  if (location.hash) {
+    const element = document.getElementById(location.hash.substring(1));
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+}, [location]);
+  
   return (
-    <div className="mt-20 w-full flex flex-col items-center coursespage gap-32">
-
+    <div className="mt-30 w-full flex flex-col items-center coursespage gap-32">
       {courseGroups.map((group, groupIndex) => (
-        <div key={groupIndex} className="w-full pl-20">
-
+        <div
+          key={groupIndex}
+          id={group.slug}
+          className="w-full pl-20 scroll-mt-32"
+        >
           {/* GROUP TITLE */}
           <h2 className="text-3xl font-bold mb-10 text-start text-muted-foreground">
             {group.groupName}
           </h2>
-
           {/* GROUP CARDS */}
           <div className="grid grid-cols-3 gap-x-40 gap-y-20">
             {group.courses.map((course) => (
@@ -235,7 +255,6 @@ export default function CoursesList() {
                   className="imgBx"
                   style={{ backgroundImage: `url(${course.image})` }}
                 ></div>
-
                 <div className="content">
                   <span className="price">
                     <a href="#">{course.price}</a>
