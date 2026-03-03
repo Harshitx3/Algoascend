@@ -12,10 +12,18 @@ export default function LandingPage() {
     <div className="px-4 md:px-8">
       <Hero />
       <SmallCard />
-      <Explore />
-      <Services />
-      <Team />
-      <Testimonial />
+      <div id="gallery">
+        <Explore />
+      </div>
+      <div id="schools">
+        <Services />
+      </div>
+      <div id="about">
+        <Team />
+      </div>
+      <div id="students">
+        <Testimonial />
+      </div>
       <FAQ />
       <Contact />
     </div>

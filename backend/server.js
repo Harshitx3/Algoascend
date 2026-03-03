@@ -7,6 +7,7 @@ const { connectDB } = require('./config/db');
 const otpRoutes = require('./routes/otpRoutes');
 const authRoutes = require('./routes/authRoutes');
 const contactRoutes = require('./routes/contactRoutes');
+const paymentRoutes = require('./routes/paymentRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -24,6 +25,7 @@ app.use((req, res, next) => {
 app.use(otpRoutes);
 app.use(authRoutes);
 app.use(contactRoutes);
+app.use(paymentRoutes);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 

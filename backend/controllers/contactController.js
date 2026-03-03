@@ -29,24 +29,35 @@ async function createContact(req, res) {
       message,
     });
 
-    if (isEmailEnabled && transporter) {
-      const subject = `New contact request from ${firstName} ${lastName}`;
-      const text = [
-        `Name: ${firstName} ${lastName}`,
-        `Email: ${email}`,
-        `Phone: ${phone}`,
-        `Topic: ${topic}`,
-        '',
-        message,
-      ].join('\n');
+    console.log(`Contact message saved in DB: ${doc._id}`);
 
-      await transporter.sendMail({
-        from: CONTACT_RECIPIENT_EMAIL,
-        to: CONTACT_RECIPIENT_EMAIL,
-        replyTo: email,
-        subject,
-        text,
-      });
+    if (isEmailEnabled && transporter) {
+      const subject = `[Contact Form] New request from ${firstName} ${lastName}`;
+      const html = `
+        <h3>New Contact Request</h3>
+        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Topic:</strong> ${topic}</p>
+        <p><strong>Message:</strong></p>
+        <p style="white-space: pre-wrap;">${message}</p>
+        <hr />
+        <p><small>This message was sent from the AlgoAscend contact form.</small></p>
+      `;
+
+      try {
+        await transporter.sendMail({
+          from: `"AlgoAscend Contact" <${CONTACT_RECIPIENT_EMAIL}>`,
+          to: CONTACT_RECIPIENT_EMAIL,
+          replyTo: email,
+          subject,
+          html,
+        });
+        console.log(`Email notification sent to ${CONTACT_RECIPIENT_EMAIL}`);
+      } catch (emailError) {
+        console.error('Failed to send email notification:', emailError);
+        // We still return success because the message was saved in DB
+      }
     }
 
     res.status(201).json({ success: true, id: doc._id });
