@@ -1,3 +1,15 @@
+import { Link } from "react-router-dom";
+
+const tracks = [
+  { title: "Foundations Track", slug: "foundations" },
+  { title: "Software Engineering Track", slug: "software-engineering" },
+  { title: "Data & Analytics Track", slug: "data-analytics" },
+  { title: "AI & Machine Learning Track", slug: "ai-ml" },
+  { title: "Generative AI & LLM Track", slug: "generative-ai" },
+  { title: "Agentic AI Track (Flagship)", slug: "agentic-ai" },
+  { title: "Career Acceleration Track", slug: "career-acceleration" },
+];
+
 export default function Explore() {
   return (
     <div className="mt-20 px-4 md:px-8">
@@ -22,6 +34,7 @@ export default function Explore() {
             </h2>
           </div>
         </div>
+
       </div>
     </div>
   )

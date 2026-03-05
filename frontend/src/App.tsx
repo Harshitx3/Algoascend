@@ -1,11 +1,7 @@
-
-import { Navigate, Route, Routes } from "react-router-dom";
-
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-
+import { Route, Routes } from "react-router-dom";
 
 import Page from "./app/page";
+
 import Courses from "./app/menu-items/courses/courses";
 import CourseDetail from "./app/menu-items/courses/course-detail";
 
@@ -26,5 +22,5 @@ export default function App() {
         </Routes>
       </div>
     </div>
-  )
-}
+  );
+};

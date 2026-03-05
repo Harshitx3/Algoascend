@@ -3,6 +3,7 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
+  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
@@ -72,14 +73,22 @@ export default function Navbar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
-              <NavigationMenuContent>
-              </NavigationMenuContent>
+              <NavigationMenuLink className="hover:bg-[#1A1D23] hover:text-white w-20">
+                <Link
+                  to="/about-us"
+                >
+                  About Us
+                  </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Gallery</NavigationMenuTrigger>
-              <NavigationMenuContent>
-              </NavigationMenuContent>
+              <NavigationMenuLink className="hover:bg-[#1A1D23] hover:text-white">
+                <Link
+                  to="/gallery"
+                >
+                  Gallery
+                  </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>

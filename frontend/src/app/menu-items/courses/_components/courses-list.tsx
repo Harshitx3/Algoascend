@@ -3,7 +3,9 @@ import { loadRazorpayCheckout, openCheckout } from "@/lib/razorpay";
 import { Link } from "react-router-dom";
 import { courseGroups } from "../course-data";
 
+export default function CoursesList() {
 
+  const location = useLocation();
 
 export default function CoursesList() {
   function rupeesToPaise(str: string) {
@@ -76,16 +78,17 @@ export default function CoursesList() {
   }
 
   return (
-    <div className="mt-20 w-full flex flex-col items-center coursespage gap-32">
-
+    <div className="mt-30 w-full flex flex-col items-center coursespage gap-32">
       {courseGroups.map((group, groupIndex) => (
-        <div key={groupIndex} className="w-full pl-20">
-
+        <div
+          key={groupIndex}
+          id={group.slug}
+          className="w-full pl-20 scroll-mt-32"
+        >
           {/* GROUP TITLE */}
           <h2 className="text-3xl font-bold mb-10 text-start text-muted-foreground">
             {group.groupName}
           </h2>
-
           {/* GROUP CARDS */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
             {group.courses.map((course) => (
