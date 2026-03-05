@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 
 import Page from "./app/page";
 import Courses from "./app/menu-items/courses/courses";
+import CourseDetail from "./app/menu-items/courses/course-detail";
 
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/app" element={<Page />} />
           <Route path="/app/courses" element={<Courses />} />
+          <Route path="/app/courses/:courseId" element={<CourseDetail />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
